@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans"> 
+
+    <meta charset="utf-8">
+    <title>underdocs Ösztöndíj Felhívás</title>
+    <meta name="description" content="Hallgatót keresünk az underdocs nyílt forráskódú dokumentáció-generátor továbbfejlesztéséhez.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="underdocs Ösztöndíj Felhívás" />
+    <meta property="og:description" content="Hallgatót keresünk az underdocs nyílt forráskódú dokumentáció-generátor továbbfejlesztéséhez." />
+    <meta property="og:image" content="logo.png" />
+
+    <!-- All kool kats and kittens use inline styling for dem speedz. -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+        :root {
+            --background-color: #ffffff;
+
+            --text-font: 'IBM Plex Sans', sans-serif;
+            --text-color: black;
+
+            --code-font: 'Overpass Mono', monospace;
+
+            --header-border-color: #aaaaaa;
+            --header-border: 1px solid var(--header-border-color);
+
+            --table-border-color: #cccccc;
+            --table-border: 1px solid var(--table-border-color);
+            --table-link-color: #0645ad;
+            --table-link-visited-color: #0b0080;
+
+            --breadcrumb-link-color: #0645ad;
+            --breadcrumb-link-visited-color: #0b0080;
+
+            --attribute-key-color: #005900;
+            --attribute-value-color: #008000;
+
+            --member-type-color: #008000;
+
+            --parameter-type-color: #008000;
+
+            --main-width: 80ch;
+        }
+
+        html {
+            font-size: 1.2rem;
+            line-height: 1.5;
+
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding-top: 1em;
+            padding-bottom: 1em;
+
+            font-family: var(--text-font);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: minmax(1.2rem, 1fr) minmax(0, var(--main-width)) minmax(1.2rem, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        main>div>section:not(:last-of-type) {
+            padding-bottom: 0.5rem;
+        }
+
+        main>* {
+            grid-column: 2;
+        }
+
+        h1 {
+            margin: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+
+            font-size: 2.1rem;
+        }
+
+        @media (min-width: 901px) {
+            section {
+                font-size: 1.2rem;
+            }
+        }
+
+        .logo>img {
+            width: 50%;
+        }
+
+        @media (min-width: 901px) {
+            #example {
+                margin-left: -5rem;
+                margin-right: -5rem;
+            }
+
+            #example>img {
+                width: 50%;
+                float:left;
+            }
+        }
+
+        @media (max-width: 900px) {
+            #example>img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .logo>img {
+                width: 75%;
+            }
+        }
+
+        #email {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #820039;
+        }
+
+        h2 {
+            border-bottom: 1px solid #820039;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <img src="logo.png" alt="underdocs logo">
+        </div>
+
+        <h1>DE IK Nyári Ösztöndíj Felhívás</h1>
+
+        <section id="brief">
+            <p>
+                Hallgatót keresünk az <a href="https://github.com/underdocs/underdocs" target="_blank">underdocs</a>
+                nyílt forráskódú dokumentáció-generátor továbbfejlesztéséhez.
+            </p>
+        </section>
+
+        <section id="about-underdocs">
+            <h2>Az underdocsról</h2>
+            <p>
+                A következőkben szeretnénk röviden bemutatni, hogy mi is az <a
+                    href="https://github.com/underdocs/underdocs" target="_blank">underdocs</a>, miért jött létre,
+                milyen célokkal kezdtük el fejleszteni.
+            </p>
+            <h3>Röviden a dokumentáció-generátorokról</h3>
+            <p>
+                A szoftverfejlesztésnek elengedhetetlen része a tényleges programozáson felül a dokumentáció készítése
+                is. Megfelelő dokumentációval nemcsak karbantarthatóbbá tesszük a kódbázist, hanem a projektünket
+                felhasználó kliensek is könnyebben eligazodnak rajta.
+            </p>
+            <p>
+                Elősegítendő a kódbázis egyszerű felfedezhetőségét és felhasználhatóságát, számos olyan eszköz készült,
+                mely a megfelelő kommenteket felhasználva (úgynevezett <i>doc commentek</i>) HTML vagy más formátumú
+                kimenetet készít. Java fejlesztők számára ismert lehet a <a
+                    href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html"
+                    target="_blank">javadoc</a> eszköz, míg JavaScriptben jártasak a <a href="https://jsdoc.app/"
+                    target="_blank">JSDoc</a> formátumról hallhatták már.
+            </p>
+            <h3>A dokumentáció és a C</h3>
+            <p>
+                A C minden idők egyik legnépszerűbb programozási nyelve. Lényegében nem létezik olyan platform, melyhez
+                ne létezne C fordító. Beágyazott és teljesítménykritikus alkalmazások esetén ma is a C az elsődlegesen
+                használt programozási nyelv.
+            </p>
+            <p>
+                Népszerűsége ellenére, a C nem rendelkezik hivatalos ajánlással, ami a dokumentációs kommentek
+                formátumát illeti. Ehelyett a fejlesztőknek kell kiválasztaniuk az általuk használni kívánt formátumot
+                és generátort. A teljes igénye nélkül, népszerűbbnek tekinthetők a következők:
+            </p>
+            <ul>
+                <li><a href="http://www.doxygen.nl/" target="_blank">doxygen</a>,</li>
+                <li><a href="https://jessevdk.github.io/cldoc/" target="_blank">cldoc</a>,</li>
+                <li><a href="https://github.com/standardese/standardese" target="_blank">standardese</a>,</li>
+                <li><a href="https://doc.qt.io/qt-5/qdoc-index.html" target="_blank">QDoc</a>,</li>
+                <li><a href="https://breathe.readthedocs.io/en/latest/" target="_blank">Sphinx (Breathe
+                        segítségével)</a>.</li>
+            </ul>
+            <h3>Miért kezdtünk bele egy n + 1-edik eszközbe?</h3>
+            <p>
+                Az elmúlt években létrehoztunk egy közepes méretű kódbázist (több mint 50 header fájl) a <a
+                    href="https://github.com/cryptid-org/cryptid-native" target="_blank">CryptID</a> személyében, mely
+                egy C-ben írt, WebAssemblyt célzó kriptográfiai könyvtár. Az elmúlt hónapokban megnőtt az érdeklődés a
+                könyvtár iránt, amire mi szerettünk volna egy felhasználóbarát dokumentációval válaszolni.
+            </p>
+            <p>
+                Ennélfogva, megnéztük, milyen lehetőségeink vannak, ha szép HTML dokumentációt szeretnénk készíteni a
+                kódbázisunkból. Az előbb felsorolt eszközökön végighaladva a következő hiányosságokat tapasztaltuk:
+            </p>
+            <ul>
+                <li>Az eszköz igazából C++-hoz készült, a C támogatása mellékes, csak amolyan bónusz.</li>
+                <li>A generált oldalak gyakran úgy néznek ki, mintha a '90-es évek végén hozták volna létre őket.</li>
+                <li>A létrehozott HTML weboldal nehezen böngészhető, nehéz rajta eligazodni.</li>
+                <li>Kényelmetlen a dokumentációs formátum, nehéz megfelelően formázott, akár képeket és matematikai
+                    formulákat is tartalmazó dokumentációt hozzáadni.</li>
+            </ul>
+            <p>
+                Mivel nem találtunk olyan eszköz, ami kielégíti az igényeinket, úgy döntöttünk, készítünk egy sajátot.
+                Ez lett az underdocs. Alant látható egy apró példakód és a belőle generált kimenet.
+            </p>
+            <div id="example">
+                <img src="example-code.png" alt="Example code.">
+                <img src="example-output.png" alt="Example output.">
+            </div>
+        </section>
+
+        <section id="task">
+            <h2>Az elvégzendő feladat</h2>
+            <p>
+                Az underdocs jelenleg inkább egy <i>proof-of-concept</i> alkalmazásnak tekinthető, semmint kész szoftverterméknek. A nyári szakmai ösztöndíj keretében a feladatod annak elősegítése, hogy az underdocs egy funkcionalitásban gazdag, akár <i>production</i> környezetben is felhasználható generátor legyen.
+            </p>
+            <p>
+                További egyeztetés után a GitHub Issuesban vezetett <a href="https://github.com/underdocs/underdocs/issues" target="_blank">feladatok</a> közül választjuk majd ki azokat, melyek az ösztöndíj tényleges <i>scope</i>-ját jelentik. Néhány <i>issue</i> ízelítőül:
+            </p>
+            <ul>
+                <li>Kódrészletek és matematikai kifejezések előzetes kirajzolása GraalVM segítségével.</li>
+                <li>Dokumentáció generálása ugyanazon projekt több verziójához.</li>
+                <li>Kliens-oldali keresés előzetesen kiszámolt indexek felhasználásával.</li>
+            </ul>
+        </section>
+
+        <section id="what-you-get">
+            <h2>Mit kapsz a projekttől?</h2>
+            <p>
+                A projektben való részvétellel a következőkkel lehetsz gazdagabb:
+            </p>
+            <ul>
+                <li>Sikeres pályázat esetén a DE IK Nyári Szakmai Ösztöndíj összege.</li>
+                <li>A C nyelv és nyelvtan mélyebb ismerete.</li>
+                <li>A Kotlin nyelv mélyebb ismerete (az underdocs Kotlinban készült).</li>
+                <li>Megismerkedhetsz a JVM-alapú fejlesztés jövőjét jelentő GraalVM-mel.</li>
+                <li>A git és a GitHub (Projects, Issues, PRs, Actions) támogatta fejlesztés elsajátítása.</li>
+                <li>Több hónapon át tartó mentorálásban lesz részed az ipart és konferenciákat is megjárt informatikusok támogatásával.</li>
+                <li>Lesz egy olyan nyílt forráskódú projekt a portfóliódban, melyet bármely állásinterjún büszkén felvillanthatsz.</li>
+            </ul>
+        </section>
+
+        <section id="what-is-required">
+            <h2>Mit várunk el Tőled mi?</h2>
+            <p>
+                Mielőtt jelentkezel, kérjük, gondold át, hogy rendelkezel-e a következőkkel:
+            </p>
+            <ul>
+                <li>A Java (esetleg Kotlin) stabil ismerete.</li>
+                <li>A HTML és a CSS alapszintű, de magabiztos ismerete.</li>
+                <li>A JavaScript alapszintű ismerete.</li>
+                <li>A nyár folyamán rendelkezésre álló idő (szeretnénk, ha hétről hétre foglalkoznál a projekttel).</li>
+                <li>Vágy a fejlődésre, tanulásra.</li>
+                <li>Képesség az önálló problémamegoldásra. Bár mentorálunk, azonban szeretnénk, ha sok kihívással önállóan is képes lennél megbirkózni.</li>
+            </ul>
+        </section>
+
+        <section id="where-to-apply">
+            <h2>Hol jelentkezhetsz?</h2>
+            <p>A jelentkezéshez küldj egy bemutatkozó emailt a következő címre:</p>
+            <div id="email">
+                bagossy.attila[at]inf.unideb.hu
+            </div>
+            <p>
+                Kérjük, hogy az emailben írd le, hogy milyen projektekben vettél részt eddig, illetve, hogy miért is szeretnél jelentkezni!
+            </p>
+        </section>
+
+        <section id="signature">
+            <h3>Várjuk jelentkezésedet!</h3>
+            <p>
+                Bagossy Attila és Vécsi Ádám, a DE Informatikai Tudományok Doktori Iskolájának doktoranduszai.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
